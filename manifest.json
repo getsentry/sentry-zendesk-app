@@ -7,12 +7,12 @@
   "domainWhitelist": ["app.getsentry.com"],
   "parameters": [
     {
-      "label": "Sentry API Key",
-      "name": "key",
+      "label": "Sentry Auth Token",
+      "name": "token",
       "type": "text",
       "secure": true,
       "required": true,
-      "helpText": "Provide your Sentry API key"
+      "helpText": "Provide your Sentry authentication token"
     },
     {
       "label": "Sentry organization slug",

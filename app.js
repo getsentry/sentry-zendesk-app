@@ -21,8 +21,9 @@
           type: 'GET',
           dataType: 'json',
           headers: {
-            "Authorization": "Basic " + Base64.encode(this.setting('key') + ":")
+            "Authorization": "Bearer {{setting.token}}"
           },
+          secure: true
         };
       }
     },
