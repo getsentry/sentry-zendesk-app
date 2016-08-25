@@ -4,7 +4,7 @@
     "email": "sean@lyn.ch",
     "url": "https://github.com/sean-lynch"
   },
-  "domainWhitelist": ["app.getsentry.com"],
+  "domainWhitelist": ["sentry.io"],
   "parameters": [
     {
       "label": "Sentry Auth Token",
@@ -32,7 +32,7 @@
       "label": "API host",
       "name": "host",
       "type": "hidden",
-      "default": "https://app.getsentry.com"
+      "default": "https://sentry.io"
     }
   ],
   "defaultLocale": "en",
