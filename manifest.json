@@ -1,8 +1,8 @@
 {
   "author": {
-    "name": "Sean Lynch",
-    "email": "sean@lyn.ch",
-    "url": "https://github.com/sean-lynch"
+    "name": "Sentry",
+    "email": "hello@sentry.io",
+    "url": "https://sentry.io"
   },
   "domainWhitelist": ["sentry.io"],
   "parameters": [
@@ -20,13 +20,6 @@
       "type": "text",
       "required": true,
       "helpText": "\"slug\" name of your organization"
-    },
-    {
-      "label": "Sentry project slug",
-      "name": "projectName",
-      "type": "text",
-      "required": true,
-      "helpText": "\"slug\" name of your project"
     },
     {
       "label": "API host",
