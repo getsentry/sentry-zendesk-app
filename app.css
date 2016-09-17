@@ -1,18 +1,57 @@
 header {
-  color: #000000;
+  > div {
+    position: relative;
+
+    .sentry-logo {
+      width: 28px;
+      opacity: 0.1;
+      right: 0;
+      top: 0;
+      position: absolute;
+    }
+  }
+
+  h3 {
+    font-size: 15px;
+    line-height: 30px;
+  }
 }
 
-#logo {
-  width: 16px;
-  vertical-align: text-top;
-}
-
-
-h4 {
-  margin-top: 10px;
-}
-
-.issue-summary {
+.issues {
   margin-left: 0;
-  margin-top: 10px;
+
+  > li {
+    position: relative;
+  }
+
+  .error-level {
+    width: 15px;
+    position: absolute;
+    left: 0;
+    top: 2px;
+
+    span {
+      width: 15px;
+      height: 15px;
+      display: inline-block;
+      border-radius: 30px;
+
+      &.level-error {
+        background-color: #d04437;
+      }
+
+      &.level-info {
+        background-color: #205081;
+      }
+
+      &.level-warning {
+        background-color: #f6c342;
+      }
+    }
+  }
+
+  .item {
+    margin-left: 24px;
+  }
+
 }

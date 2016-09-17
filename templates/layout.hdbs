@@ -1,4 +1,9 @@
-<header>
-  <h3><img id="logo" src="{{assetURL 'sentry-icon.png'}}" alt="Sentry Logo" /> Sentry</h3>
-</header>
-<section data-main></section>
+<div class="sentry-widget">
+  <header>
+    <div>
+      <h3>Related Sentry Issues</h3>
+      <img class="sentry-logo" src="{{assetURL 'logo-small.png'}}" alt="Sentry Logo" />
+    </div>
+  </header>
+  <section data-main></section>
+</div>
