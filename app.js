@@ -49,8 +49,8 @@
 
       }).done(function(data) {
         _.each(data, function(i) {
-          i.firstSeen = moment(i.firstSeen).format('MMM DD, YYYY @ h:mm a');
-          i.lastSeen = moment(i.lastSeen).format('MMM DD, YYYY @ h:mm a');
+          i.firstSeen = moment(i.firstSeen).fromNow(true);
+          i.lastSeen = moment(i.lastSeen).fromNow(true);
         });
 
         this.switchTo('issues', {
