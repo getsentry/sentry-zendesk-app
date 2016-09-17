@@ -13,5 +13,5 @@
   </ul>
 
 {{else}}
-  <p>None found</p>
+  <p>No issues were found for this user.</p>
 {{/if}}

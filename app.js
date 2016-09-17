@@ -8,7 +8,7 @@
     requests: {
       getIssuesRequest: function(email, externalId) {
         var url = (this.setting('host') + '/api/0/organizations/' +
-                   this.setting('orgName') + '/' + '/users/issues/');
+                   this.setting('orgName') + '/users/issues/');
 
         return {
           url: url,
