@@ -1,22 +1,16 @@
 {{#if issues}}
+  <ul id="sentry-issues">
 
   {{#each issues}}
 
-  <ul class="issue-summary">
     <li>
-      <a href="{{this.permalink}}" target="_blank">
-        <strong>{{this.title}}</strong>
-      </a>
+      <strong><a href="{{this.permalink}}" target="_blank">{{this.title}}</a></strong>
+      <div class="last-seen">{{this.lastSeen}} ago - {{this.firstSeen}} old</div>
     </li>
-    <li>
-      Status: {{this.status}}
-    </li>
-    <li>
-      First seen: {{this.firstSeen}}
-    </li>
-  </ul>
 
   {{/each}}
+
+  </ul>
 
 {{else}}
   <p>None found</p>

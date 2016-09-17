@@ -7,16 +7,14 @@
 
     requests: {
       getIssuesRequest: function(email, externalId) {
-        var url = (this.setting('host') + '/api/0/projects/' +
-                   this.setting('orgName') + '/' +
-                   this.setting('projectName') + '/issues/');
+        var url = (this.setting('host') + '/api/0/organizations/' +
+                   this.setting('orgName') + '/' + '/users/issues/');
 
         return {
           url: url,
           data: {
-              'query': 'user.email%3A' + email,
-              // Can't do logicial OR to add externalId yet
-              // 'per_page': 1 <- Sentry API doesn't respect this right now
+              'email': email,
+              'limit': 5
           },
           type: 'GET',
           dataType: 'json',
@@ -52,6 +50,7 @@
       }).done(function(data) {
         _.each(data, function(i) {
           i.firstSeen = moment(i.firstSeen).format('MMM DD, YYYY @ h:mm a');
+          i.lastSeen = moment(i.lastSeen).format('MMM DD, YYYY @ h:mm a');
         });
 
         this.switchTo('issues', {
