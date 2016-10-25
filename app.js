@@ -10,7 +10,7 @@
         var url = (this.setting('host') + '/api/0/organizations/' +
                    this.setting('orgName') + '/users/issues/');
 
-        return {
+        var request = {
           url: url,
           data: {
               'email': email,
@@ -18,11 +18,22 @@
           },
           type: 'GET',
           dataType: 'json',
-          headers: {
-            "Authorization": "Bearer {{setting.token}}"
-          },
-          secure: true
         };
+
+        // NOTE: secure requests don't work using local Zat development server
+        //       https://support.zendesk.com/hc/en-us/articles/203691236#topic_ux4_lv3_ks
+        if (this.isZatEnabled()) {
+          return _.extend(request, {
+            headers: { 'Authorization': 'Bearer ' + this.setting('token') }
+          });
+        } else {
+          return _.extend(request, {
+            secure: true,
+            headers: { 'Authorization': 'Bearer {{setting.token}}' }
+          });
+        }
+
+        return request;
       }
     },
 
