@@ -63,9 +63,10 @@
           i.firstSeen = moment(i.firstSeen).fromNow(true);
           i.lastSeen = moment(i.lastSeen).fromNow(true);
         });
-
+        debugger;
         this.switchTo('issues', {
-          'issues': data
+          'issues': data,
+          'email': email
         });
       });
     }

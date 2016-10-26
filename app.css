@@ -16,12 +16,21 @@ header {
     line-height: 30px;
   }
 }
+.issue-title {
+  margin-bottom: 5px;
+
+  > span {
+    font-size: 16px;
+  }
+}
 
 .issues {
-  margin-left: 0;
+  margin-left: 0px;
 
   > li {
     position: relative;
+    border-bottom: 1px solid grey;
+    padding: 7px;
   }
 
   .error-level {
@@ -29,6 +38,7 @@ header {
     position: absolute;
     left: 0;
     top: 2px;
+    padding: 7px;
 
     span {
       width: 15px;

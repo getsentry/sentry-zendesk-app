@@ -1,4 +1,5 @@
 {{#if issues}}
+  <p class="issue-title"><span>{{email}}</span> experienced {{issues.length}} issues:</p>
   <ul class="issues">
 
   {{#each issues}}
@@ -18,5 +19,5 @@
   </ul>
 
 {{else}}
-  <p>No issues were found for this user.</p>
+  <p>No issues were found for <strong>{{email}}</strong></p>
 {{/if}}
