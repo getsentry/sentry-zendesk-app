@@ -1,3 +1,5 @@
+**NOTE: THIS VERSION OF THE APP USES THE OLD ZENDESK APP INTERFACE, WHICH HAS BEEN DEPRECATED. THIS VERSION OF THE APP IS THEREFORE ALSO DEPRECATED. YOU CAN FIND THE NEW VERSION AT https://github.com/getsentry/getsentry-zendesk-v2.**
+
 # Sentry Zendesk app
 
 Display Sentry issues for user being viewed in Zendesk.
